@@ -1,5 +1,5 @@
-E:\softy\auth-service\src\main\java\com\example\auth\AuthServiceApplication.java
-E:\softy\auth-service\src\main\java\com\example\auth\service\AuthService.java
-E:\softy\auth-service\src\main\java\com\example\auth\controller\AuthController.java
-E:\softy\auth-service\src\main\java\com\example\auth\model\User.java
-E:\softy\auth-service\src\main\java\com\example\auth\repository\UserRepository.java
+E:\.Documents\Repositoryes\AuthServiceApplication\src\main\java\com\example\auth\controller\AuthController.java
+E:\.Documents\Repositoryes\AuthServiceApplication\src\main\java\com\example\auth\service\AuthService.java
+E:\.Documents\Repositoryes\AuthServiceApplication\src\main\java\com\example\auth\model\User.java
+E:\.Documents\Repositoryes\AuthServiceApplication\src\main\java\com\example\auth\repository\UserRepository.java
+E:\.Documents\Repositoryes\AuthServiceApplication\src\main\java\com\example\auth\AuthServiceApplication.java
