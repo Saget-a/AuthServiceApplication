@@ -2,6 +2,7 @@ package com.example.auth.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.Optional;
 
 import com.example.auth.model.User;
 import com.example.auth.repository.UserRepository;
@@ -12,15 +13,21 @@ public class AuthService {
     @Autowired
     private UserRepository userRepository;
 
+    public Optional<User> findUserByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
     public boolean authenticate(String username, String password) {
-        User user = userRepository.findByUsername(username);
-        return user != null && user.getPassword().equals(password);
+        return userRepository.findByUsername(username)
+            .map(user -> user.getPassword().equals(password))
+            .orElse(false);
     }
 
     public boolean register(String username, String password) {
-        if (userRepository.existsById(username)) {
+        if (userRepository.findByUsername(username).isPresent()) {
             return false;
         }
+
         userRepository.save(new User(username, password));
         return true;
     }
